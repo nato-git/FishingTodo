@@ -21,7 +21,7 @@ const loadTodo = (): Todo[] => {
 const loadUser = (): string | null => {
   const name = localStorage.getItem(localStorageUserKey);
   if (name === null || name.trim() === "") {
-    window.location.replace("/user");
+    window.location.replace(`${import.meta.env.BASE_URL}user.html`);
   }
   return name;
 }

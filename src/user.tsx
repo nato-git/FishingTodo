@@ -19,7 +19,7 @@ const App = () => {
         };
         const moveToApp = (userName: string) => {
             saveUserName(userName);
-            window.location.replace("/");
+            window.location.replace(import.meta.env.BASE_URL);
         }
         return (
             <div className="h-screen flex items-center justify-center">
@@ -50,7 +50,7 @@ const App = () => {
         )
     }
     else{
-        window.location.replace("/");
+        window.location.replace(import.meta.env.BASE_URL);
     }
 }
 
