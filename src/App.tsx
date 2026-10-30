@@ -44,14 +44,20 @@ const App = () => {
       name: "歩く",
       isDone: false,
       priority: 3,
-      deadline: dayjs("2024-06-30").toDate()
+      deadline: null
     }
   ]
+  const [nowTodos, setTodos] = useState(todos);
+  const updateTodo = (newTodo:Todo) => {
+    setTodos(todos.map((todo) => todo.id === newTodo.id ? newTodo:todo));
+  };
   return (
     <div>
       <h1 className="flex justify-center text-4xl font-bold my-4">Fishing Todo<FontAwesomeIcon icon={faOtter} className="ml-2" /></h1>
       <h2 className="flex justify-center text-2xl font-semibold my-6">Hello, {userName}! Let's fishing Todo!</h2>
-      <SetTodo todos={todos} />
+      <div className="m-4 justify-content border-2 border-gray-300 rounded-md p-4">
+        <SetTodo todos={todos} updateTodo={updateTodo}/>
+      </div>
     </div>
   );
 }
