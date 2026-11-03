@@ -1,7 +1,7 @@
 # FishingTodo
 
 React、TypeScript、Tailwind CSS を使用し、ローカルストレージでデータを永続化したTodoアプリです。  
-**[Todoアプリへ](https://nato-git.github.io/react-todo-app/user)**
+**[Todoアプリへ](https://nato-git.github.io/FishingTodo/user)**
 
 ## 機能
 
