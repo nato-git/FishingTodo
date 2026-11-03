@@ -87,7 +87,7 @@ const TodoItem = ({ todo, props }: { todo: Todo; props: Props }) => {
                 className="border border-gray-300 rounded-md p-2 m-0.5 md:m-2 w-full"
             />
             <button 
-                className="bg-blue-500 text-white rounded-md p-2 m-0.5 md:m-2 w-full disabled:opacity-50 disabled:cursor-not-allowed hover:bg-blue-600" 
+                className="bg-blue-500 text-white rounded-md p-2 m-0.5 md:m-2 w-full cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed hover:bg-blue-600" 
                 disabled={nowPriority > 3 || nowPriority < 1 || !nowTodoName.trim() || !nowPriority} 
                 onClick={changeTodo}
             >

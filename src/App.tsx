@@ -200,7 +200,7 @@ const App = () => {
             <input type="number" value={newPriority} onChange={(e) => setPriority(parseInt(e.target.value))} className="border border-gray-300 rounded-md p-2 m-1 w-full"/>
             <FontAwesomeIcon icon={faCalendarDays} />期限日
             <input type="date" onChange={(e) => setDeadline(new Date(e.target.value))} className="border border-gray-300 rounded-md p-2 m-1 w-full"/>
-            <button className="bg-blue-500 text-white rounded-md p-2 m-1 w-full disabled:opacity-50 disabled:cursor-not-allowed hover:bg-blue-600" disabled={newPriority > 3 || newPriority < 1 || !newTodoName.trim() || !newPriority} onClick={() => createTodo(newFolder, newTodoName, newPriority, newDeadline)}>追加</button>
+            <button className="bg-blue-500 text-white rounded-md p-2 m-1 w-full cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed hover:bg-blue-600" disabled={newPriority > 3 || newPriority < 1 || !newTodoName.trim() || !newPriority} onClick={() => createTodo(newFolder, newTodoName, newPriority, newDeadline)}>追加</button>
             {(newPriority > 3 || newPriority < 1 || !newPriority) && (
               <div className="text-red-500 font-bold m-2">レア度は1〜3にしてください</div>
             )}

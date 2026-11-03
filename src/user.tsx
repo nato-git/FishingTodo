@@ -1,13 +1,15 @@
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faOtter } from "@fortawesome/free-solid-svg-icons";
 
 const localStorageUserKey = "userName";
 
 const loadUserName = (): string=> {
-  const name = localStorage.getItem(localStorageUserKey);
-  if (name === null || name.trim() === "") {
-    return "";
-  }
-  return name;
+    const name = localStorage.getItem(localStorageUserKey);
+    if (name === null || name.trim() === "") {
+        return "";
+    }
+    return name;
 };
 
 const App = () => {
@@ -23,7 +25,7 @@ const App = () => {
         }
         return (
                 <div className="h-screen flex items-center justify-center flex-col">
-                    <h1 className="text-3xl font-bold my-4">Fishing Todo</h1>
+                    <h1 className="text-3xl font-bold my-4">Fishing Todo<FontAwesomeIcon icon={faOtter} /></h1>
                     <div className="py-10 px-12 md:py-10 md:px-20 rounded-xl border-4 border-gray-300">
                         <div>
                             <h1 className="mb-1 md:mb-4">ユーザー名を登録しましょう！</h1>
