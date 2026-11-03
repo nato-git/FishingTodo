@@ -27,7 +27,7 @@ const TodoItem = ({ todo, props }: { todo: Todo; props: Props }) => {
     const [isWindowOpen, setIsWindowOpen] = useState(false);
     const [challengeProgress, setChallengeProgress] = useState(props.challengeProgress);
     const priorityIcons = Array.from({ length: nowPriority }).map((_, i) => (
-        <FontAwesomeIcon key={i} icon={faFishFins} style={{ color: "lightblue" }} float className="m-1" />
+        <FontAwesomeIcon key={i} icon={faFishFins} style={{ color: "lightblue" }} float className="m-0.1 md:m-1" />
     ));
     const changeWindow = () => {
         setFolder(todo.folder || "");

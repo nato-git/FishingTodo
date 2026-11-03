@@ -1,33 +1,34 @@
-# TodoApp
+# FishingTodo
 
-React、TypeScript、Tailwind CSS を使用し、ローカルストレージでデータを永続化した「Todoアプリ」です。  
+React、TypeScript、Tailwind CSS を使用し、ローカルストレージでデータを永続化したTodoアプリです。  
 **[Todoアプリへ](https://nato-git.github.io/react-todo-app/user)**
 
-## 開発履歴
+## 機能
 
-- 2026年10月16日：プロジェクト開始
-- 2026年11月3日：リリース
+初めにユーザー名を登録することができ、自分だけのTodoアプリを感じながら使用することができます。  
+また、チャレンジ欄がついており、ゲーム感覚でタスクを追加したり達成したりすることができます。  
+魚をメインにしているアプリとなっており、視覚的に楽しいものとなっています。  
+タスクの作成には、種類名(タグ)をつけることができ、タスクをジャンルで分けることができます。 
+レスポンシブ対応しており、スマートフォンで使用しても崩れにくくなっています。 
 
-## ライセンス
+## 開発背景
 
-MIT License
+Todoアプリは基本楽しくないものであり、長続きしにくい経験があるため、楽しく使えるTodoアプリを目指しました。  
 
-Copyright (c) 2026 Nato
+## 開発技術
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+技術は主にTypeScript、Reactを使用し、デザインはTailwind CSSを使用しました。  
+Todoデータの保存は、ローカルストレージを使用しています。
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+## 使用画面
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+![ログイン画面](picture/logging.png)  
+![ホーム画面](picture/home.png)  
+![追加画面](picture/add.png)
+![セレクト画面](picture/select.png)
+![編集画面](picture/edit.png)
+![チャレンジ画面](picture/challenge.png)
+
+## 開発期間
+
+2026年10月30日 ～ 2026年11月3日 (取り組み時間：約62時間)
