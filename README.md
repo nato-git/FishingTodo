@@ -1,10 +1,12 @@
 # TodoApp
 
-React、TypeScript、Tailwind CSS を使用し、ローカルストレージでデータを永続化した「Todoアプリ」です。
+React、TypeScript、Tailwind CSS を使用し、ローカルストレージでデータを永続化した「Todoアプリ」です。  
+**[Todoアプリへ](https://nato-git.github.io/react-todo-app/user)**
 
 ## 開発履歴
 
 - 2026年10月16日：プロジェクト開始
+- 2026年11月3日：リリース
 
 ## ライセンス
 
