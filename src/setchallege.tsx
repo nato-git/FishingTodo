@@ -12,7 +12,7 @@ const ChallengeList = ({ challengeList }: Props) => {
         <div>
             {challengeList.map((challenge) => (
                 <div key={challenge.id} className="border-2 border-blue-300 p-4 mb-2 rounded">
-                    <h3 className="font-bold">{((challenge.id === 5 || challenge.id === 10 || challenge.id === 15 || challenge.id === 20) && <FontAwesomeIcon icon={faAward} />) || ((challenge.id === 25) && <FontAwesomeIcon icon={faMedal} style={{ color: "gold" }}/>) || ((challenge.id === 30) && <FontAwesomeIcon icon={faCrown} style={{ color: "gold" }} />)} {challenge.title}</h3>
+                    <h3 className="font-bold">{((challenge.id === 5 || challenge.id === 10 || challenge.id === 15 || challenge.id === 20) && <FontAwesomeIcon icon={faAward} style={{ color: "gold" }} />) || ((challenge.id === 25) && <FontAwesomeIcon icon={faMedal} style={{ color: "gold" }}/>) || ((challenge.id === 30) && <FontAwesomeIcon icon={faCrown} style={{ color: "gold" }} />)} {challenge.title}</h3>
                     <p>{challenge.description}</p>
                     <p>進捗: {challenge.progress} / {challenge.progressComplete}</p>
                     <p>チャレンジ状況: {challenge.isCompleted ? (
