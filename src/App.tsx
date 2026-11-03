@@ -56,22 +56,22 @@ const loadChallengeList = (): challenge[] => {
     {id: 12, title: "タスクをさらに削除する", description: "タスクを10つ削除する", progress: challengeProgress.deleteTodoCount, progressComplete: 10, isCompleted: challengeProgress.deleteTodoCount >= 10},
     {id: 13, title: "さらにタスクの完了状態を変更する", description: "タスクの完了状態を10つ変更する", progress: challengeProgress.completeTodoCount, progressComplete: 10, isCompleted: challengeProgress.completeTodoCount >= 10},
     {id: 14, title: "タスクをさらに編集する", description: "タスクを10つ編集する", progress: challengeProgress.editTodoCount, progressComplete: 10, isCompleted: challengeProgress.editTodoCount >= 10},
-    {id: 15, title: "フィッシング中級者", description: "フィッシング中級者をクリアする。", progress: challengeProgress.createTodoCount + challengeProgress.deleteTodoCount + challengeProgress.completeTodoCount + challengeProgress.editTodoCount, progressComplete: 50, isCompleted: challengeProgress.createTodoCount >= 10 && challengeProgress.deleteTodoCount >= 10 && challengeProgress.completeTodoCount >= 10 && challengeProgress.editTodoCount >= 10},
+    {id: 15, title: "フィッシング中級者", description: "フィッシング中級者をクリアする。", progress: challengeProgress.createTodoCount + challengeProgress.deleteTodoCount + challengeProgress.completeTodoCount + challengeProgress.editTodoCount, progressComplete: 40, isCompleted: challengeProgress.createTodoCount >= 10 && challengeProgress.deleteTodoCount >= 10 && challengeProgress.completeTodoCount >= 10 && challengeProgress.editTodoCount >= 10},
     {id: 16, title: "まだまだタスクを作成する", description: "タスクを20つ作成する", progress: challengeProgress.createTodoCount, progressComplete: 20, isCompleted: challengeProgress.createTodoCount >= 20},
     {id: 17, title: "まだまだタスクを削除する", description: "タスクを20つ削除する", progress: challengeProgress.deleteTodoCount, progressComplete: 20, isCompleted: challengeProgress.deleteTodoCount >= 20},
     {id: 18, title: "まだまだタスクの完了状態を変更する", description: "タスクの完了状態を20つ変更する", progress: challengeProgress.completeTodoCount, progressComplete: 20, isCompleted: challengeProgress.completeTodoCount >= 20},
     {id: 19, title: "まだまだタスクを編集する", description: "タスクを20つ編集する", progress: challengeProgress.editTodoCount, progressComplete: 20, isCompleted: challengeProgress.editTodoCount >= 20},
-    {id: 20, title: "フィッシング上級者", description: "フィッシング上級者をクリアする。", progress: challengeProgress.createTodoCount + challengeProgress.deleteTodoCount + challengeProgress.completeTodoCount + challengeProgress.editTodoCount, progressComplete: 50, isCompleted: challengeProgress.createTodoCount >= 20 && challengeProgress.deleteTodoCount >= 20 && challengeProgress.completeTodoCount >= 20 && challengeProgress.editTodoCount >= 20},
+    {id: 20, title: "フィッシング上級者", description: "フィッシング上級者をクリアする。", progress: challengeProgress.createTodoCount + challengeProgress.deleteTodoCount + challengeProgress.completeTodoCount + challengeProgress.editTodoCount, progressComplete: 80, isCompleted: challengeProgress.createTodoCount >= 20 && challengeProgress.deleteTodoCount >= 20 && challengeProgress.completeTodoCount >= 20 && challengeProgress.editTodoCount >= 20},
     {id: 21, title: "嫌になるほどタスクを作成する", description: "タスクを50つ作成する", progress: challengeProgress.createTodoCount, progressComplete: 50, isCompleted: challengeProgress.createTodoCount >= 50},
     {id: 22, title: "嫌になるほどタスクを削除する", description: "タスクを50つ削除する", progress: challengeProgress.deleteTodoCount, progressComplete: 50, isCompleted: challengeProgress.deleteTodoCount >= 50},
     {id: 23, title: "嫌になるほどタスクの完了状態を変更する", description: "タスクの完了状態を50つ変更する", progress: challengeProgress.completeTodoCount, progressComplete: 50, isCompleted: challengeProgress.completeTodoCount >= 50},
     {id: 24, title: "嫌になるほどタスクを編集する", description: "タスクを50つ編集する", progress: challengeProgress.editTodoCount, progressComplete: 50, isCompleted: challengeProgress.editTodoCount >= 50},
-    {id: 25, title: "フィッシングプロ", description: "フィッシングプロをクリアする。", progress: challengeProgress.createTodoCount + challengeProgress.deleteTodoCount + challengeProgress.completeTodoCount + challengeProgress.editTodoCount, progressComplete: 50, isCompleted: challengeProgress.createTodoCount >= 50 && challengeProgress.deleteTodoCount >= 50 && challengeProgress.completeTodoCount >= 50 && challengeProgress.editTodoCount >= 50},
+    {id: 25, title: "フィッシングプロ", description: "フィッシングプロをクリアする。", progress: challengeProgress.createTodoCount + challengeProgress.deleteTodoCount + challengeProgress.completeTodoCount + challengeProgress.editTodoCount, progressComplete: 200, isCompleted: challengeProgress.createTodoCount >= 50 && challengeProgress.deleteTodoCount >= 50 && challengeProgress.completeTodoCount >= 50 && challengeProgress.editTodoCount >= 50},
     {id: 26, title: "限界を超えてタスクを作成する", description: "タスクを100つ作成する", progress: challengeProgress.createTodoCount, progressComplete: 100, isCompleted: challengeProgress.createTodoCount >= 100},
     {id: 27, title: "限界を超えてタスクを削除する", description: "タスクを100つ削除する", progress: challengeProgress.deleteTodoCount, progressComplete: 100, isCompleted: challengeProgress.deleteTodoCount >= 100},
     {id: 28, title: "限界を超えてタスクの完了状態を変更する", description: "タスクの完了状態を100つ変更する", progress: challengeProgress.completeTodoCount, progressComplete: 100, isCompleted: challengeProgress.completeTodoCount >= 100},
     {id: 29, title: "限界を超えてタスクを編集する", description: "タスクを100つ編集する", progress: challengeProgress.editTodoCount, progressComplete: 100, isCompleted: challengeProgress.editTodoCount >= 100},
-    {id: 30, title: "フィッシング王", description: "フィッシング王をクリアする。", progress: challengeProgress.createTodoCount + challengeProgress.deleteTodoCount + challengeProgress.completeTodoCount + challengeProgress.editTodoCount, progressComplete: 100, isCompleted: challengeProgress.createTodoCount >= 100 && challengeProgress.deleteTodoCount >= 100 && challengeProgress.completeTodoCount >= 100 && challengeProgress.editTodoCount >= 100},
+    {id: 30, title: "フィッシング王", description: "フィッシング王をクリアする。", progress: challengeProgress.createTodoCount + challengeProgress.deleteTodoCount + challengeProgress.completeTodoCount + challengeProgress.editTodoCount, progressComplete: 400, isCompleted: challengeProgress.createTodoCount >= 100 && challengeProgress.deleteTodoCount >= 100 && challengeProgress.completeTodoCount >= 100 && challengeProgress.editTodoCount >= 100},
   ]
   return challengeList;
 };
@@ -155,7 +155,7 @@ const App = () => {
           <FontAwesomeIcon icon={faOtter} className="ml-2" />
         </button>
       </h1>
-      <h2 className="flex justify-center text-2xl font-semibold mt-4 mb-10">Hello, {userName}! Let's fishing Todo!</h2>
+      <h2 className="flex justify-center text-2xl font-semibold mt-4 mb-10">Hello, {userName}! Let's Fishing Todo!</h2>
       <div>
         <button className="text-blue-300 hover:text-blue-500 cursor-pointer absolute top-5 right-5" onClick={challengeWindowChange}>
           <FontAwesomeIcon icon={faFlag} size="2xl"/>
