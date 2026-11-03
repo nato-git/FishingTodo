@@ -29,7 +29,13 @@ const TodoItem = ({ todo, props }: { todo: Todo; props: Props }) => {
     const priorityIcons = Array.from({ length: nowPriority }).map((_, i) => (
         <FontAwesomeIcon key={i} icon={faFishFins} style={{ color: "lightblue" }} float className="m-1" />
     ));
-    const changeWindow = () => setIsWindowOpen(!isWindowOpen);
+    const changeWindow = () => {
+        setFolder(todo.folder || "");
+        setTodoName(todo.name);
+        setPriority(todo.priority);
+        setDeadline(todo.deadline ? new Date(todo.deadline) : null);
+        setIsWindowOpen(!isWindowOpen)
+    };
     const changeTodo = () => {
         props.updateTodo({
         ...todo,
@@ -63,25 +69,25 @@ const TodoItem = ({ todo, props }: { todo: Todo; props: Props }) => {
     return (
     <div>
     {isWindowOpen && (
-        <div className="fixed inset-20 m-4 p-6 bg-white bg-opacity-50 z-50 border-4 rounded-xl border-gray-300">
+        <div className="fixed inset-5 md:inset-20 m-4 p-6 bg-white bg-opacity-50 z-50 border-4 rounded-xl border-gray-300">
             <button className="absolute top-2 right-2 text-gray-500 hover:text-gray-700" onClick={changeWindow}>
                 <FontAwesomeIcon icon={faXmark} />
             </button>
             <FontAwesomeIcon icon={faTag} />種類名
-            <input type="text" value={nowFolder} onChange={(e) => setFolder(e.target.value)} className="border border-gray-300 rounded-md p-2 m-1 w-full"/>
+            <input type="text" value={nowFolder} onChange={(e) => setFolder(e.target.value)} className="border border-gray-300 rounded-md p-2 m-0.5 md:m-2 w-full"/>
             <FontAwesomeIcon icon={faFish} />タスク名
-            <input type="text" value={nowTodoName} onChange={(e) => setTodoName(e.target.value)} className="border border-gray-300 rounded-md p-2 m-1 w-full"/>
+            <input type="text" value={nowTodoName} onChange={(e) => setTodoName(e.target.value)} className="border border-gray-300 rounded-md p-2 m-0.5 md:m-2 w-full"/>
             <FontAwesomeIcon icon={faShrimp} />レア度
-            <input type="number" value={nowPriority} onChange={(e) => setPriority(parseInt(e.target.value))} className="border border-gray-300 rounded-md p-2 m-1 w-full"/>
+            <input type="number" value={nowPriority} onChange={(e) => setPriority(parseInt(e.target.value))} className="border border-gray-300 rounded-md p-2 m-0.5 md:m-2 w-full"/>
             <FontAwesomeIcon icon={faCalendarDays} />期限日
             <input 
                 type="date" 
                 value={nowDeadline ? dayjs(nowDeadline).format("YYYY-MM-DD") : ""} 
                 onChange={(e) => setDeadline(e.target.value ? new Date(e.target.value) : null)} 
-                className="border border-gray-300 rounded-md p-2 m-1 w-full"
+                className="border border-gray-300 rounded-md p-2 m-0.5 md:m-2 w-full"
             />
             <button 
-                className="bg-blue-500 text-white rounded-md p-2 m-1 w-full disabled:opacity-50 disabled:cursor-not-allowed hover:bg-blue-600" 
+                className="bg-blue-500 text-white rounded-md p-2 m-0.5 md:m-2 w-full disabled:opacity-50 disabled:cursor-not-allowed hover:bg-blue-600" 
                 disabled={nowPriority > 3 || nowPriority < 1 || !nowTodoName.trim() || !nowPriority} 
                 onClick={changeTodo}
             >
@@ -92,22 +98,22 @@ const TodoItem = ({ todo, props }: { todo: Todo; props: Props }) => {
             )}
             </div>
         )}
-        <div className={`flex justify-between border-4 border-blue-300 rounded-lg py-2 text-sm md:text-base m-4 ${nowIsDone ? "opacity-50": ""}`}>
-            <button className="cursor-pointer m-2 text-xl hover:text-blue-400" onClick={changeIsDone}>
+        <div className={`flex justify-between border-4 border-blue-300 rounded-lg py-2 text-sm md:text-base m-1 md:m-4 ${nowIsDone ? "opacity-50": ""}`}>
+            <button className="cursor-pointer m-0.1 md:m-2 text-xs md:text-xl hover:text-blue-400" onClick={changeIsDone}>
                 <FontAwesomeIcon icon={faUtensils} />
             </button>
-            <div className="m-2 text-xl">{nowFolder || "種類不明"}</div>
-            <div className="m-2 text-xl">{nowTodoName}</div>
-            <div className="m-2 text-xl">{priorityIcons}</div>
-            <div className="m-2 text-xl">{nowIsDone ? (<span className="text-blue-400 font-bold">完了</span>) : (<span className="text-red-400 font-bold">未完了</span>)}</div>
-            <div className="m-2 text-xl">{nowDeadline ? dayjs(nowDeadline).format("YYYY-MM-DD") : "期限なし"}</div>
+            <div className="m-0.1 md:m-2 text-xs md:text-xl">{nowFolder || "種類不明"}</div>
+            <div className="m-0.1 md:m-2 text-xs md:text-xl">{nowTodoName}</div>
+            <div className="m-0.1 md:m-2 text-xs md:text-xl">{priorityIcons}</div>
+            <div className="m-0.1 md:m-2 text-xs md:text-xl">{nowIsDone ? (<span className="text-blue-400 font-bold">完了</span>) : (<span className="text-red-400 font-bold">未完了</span>)}</div>
+            <div className="m-0.1 md:m-2 text-xs md:text-xl">{nowDeadline ? dayjs(nowDeadline).format("YYYY-MM-DD") : "期限なし"}</div>
             {nowDeadline && nowDeadline < nowtime && (
-                <div className="text-red-500 font-bold m-2 text-xl">期限超過</div>
+                <div className="text-red-500 font-bold m-0.1 md:m-2 text-xs md:text-xl">期限超過</div>
             )}
-            <button className="cursor-pointer m-2 text-xl hover:text-blue-400" onClick={changeWindow}>
+            <button className="cursor-pointer m-0.1 md:m-2 text-xs md:text-xl hover:text-blue-400" onClick={changeWindow}>
                 <FontAwesomeIcon icon={faPenToSquare} size="lg"/>
             </button>
-            <button className="cursor-pointer m-2 bg-red-500 text-white rounded-sm py-0.5 px-1 text-xl hover:bg-red-600" onClick={() => deleteTodo(todo)}>
+            <button className="cursor-pointer m-0.1 md:m-2 bg-red-500 text-white rounded-sm py-0.5 px-1 text-xs md:text-xl hover:bg-red-600" onClick={() => deleteTodo(todo)}>
                 逃がす<FontAwesomeIcon icon={faBucket} size="lg"/>
             </button>
         </div>
